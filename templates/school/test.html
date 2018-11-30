@@ -288,15 +288,85 @@
 						<label><input type="radio" /><span></span>Other Providers</label>
 					</td>
 				</tr>
+
+
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+				<script>
+				       jQuery.fn.filterByText = function(textbox, selectSingleMatch) {
+				        return this.each(function() {
+				            var select = this;
+				            var options = [];
+				            $(select).find('option').each(function() {
+				                options.push({value: $(this).val(), text: $(this).text()});
+				            });
+				            $(select).data('options', options);
+				            $(textbox).bind('change keyup', function() {
+				                var options = $(select).empty().data('options');
+				                var search = $(this).val().trim();
+				                var regex = new RegExp(search,"gi");
+				              
+				                $.each(options, function(i) {
+				                    var option = options[i];
+				                    if(option.text.match(regex) !== null) {
+				                        $(select).append(
+				                           $('<option>').text(option.text).val(option.value)
+				                        );
+				                    }
+				                });
+				                if (selectSingleMatch === true && $(select).children().length === 1) {
+				                    $(select).children().get(0).selected = true;
+				                }
+				            });            
+				        });
+				    };
+
+				    $(function() {
+				        $('#Provider_Branch').filterByText($('#Provider_Branch_textbox'), false);
+				      	$("select option").click(function(){
+				        alert(1);
+				      });
+				    });
+
+				    $(function() {
+				        $('#Admission_Coordinator').filterByText($('#Admission_Coordinator_textbox'), false);
+				      	$("select option").click(function(){
+				        alert(1);
+				      });
+				    });
+
+				    $(function() {
+				        $('#School_Coordinator').filterByText($('#School_Coordinator_textbox'), false);
+				      	$("select option").click(function(){
+				        alert(1);
+				      });
+				    });
+				</script>
 				<tr>
 					<th>Provider Branch : </th>
-					<td class="InnerInputTD" colspan="3"><input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="ex. BGE Boston  / NA" /></td>
+					<td class="InnerInputTD" colspan="3">
+						<input id="Provider_Branch" type="text" class="SearchInput" style="width:300px;" />
+						<select id="Provider_Branch_textbox" class="TableInnerInput">
+							<option>Select Provider Branch..</option>
+						</select>	
+					</td>
 				</tr>
 				<tr>
 					<th>Admission Coordinator  : </th>
-					<td class="InnerInputTD"><input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
+					<td class="InnerInputTD" colspan="3">
+						<input id="Admission_Coordinator" type="text" class="SearchInput" style="width:300px;" />
+						<select id="Admission_Coordinator_textbox" class="TableInnerInput">
+							<option>Select Admission Coordinator..</option>
+						</select>	
+					</td>
+				</tr>
+				<tr>
 					<th>School Coordinator  : </th>
-					<td class="InnerInputTD"><input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
+					<td class="InnerInputTD" colspan="3">
+						<input id="School_Coordinator" type="text" class="SearchInput" style="width:300px;" />
+						<select id="School_Coordinator_textbox" class="TableInnerInput">
+							<option>Select School Coordinator..</option>
+						</select>	
+					</td>
 				</tr>
 				<tr>
 					<th>(Enroll) Term  : </th>
