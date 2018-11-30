@@ -243,7 +243,7 @@
 
 		<div class="MTitle">School information</div>
 		<form name="" method="post" enctype="multipart/form-data">
-		<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		<!-- input type="hidden" name="_token" value="csrf_token" -->
 			<div class="InfoTable">
 				<table cellpadding="0" cellspacing="0" border="0">
 					<colgroup>
@@ -541,8 +541,8 @@
 
 
 			<div class="SubmitButtonLine">
-				<div class="Close" OnClick="self.close();">CLOSE</div>
-				<div class="Submit">SAVE</div>
+				<button class="Close" OnClick="self.close();">CLOSE</button>
+				<button class="Submit" type="submit">SAVE</button>
 			</div>
 			<div class="EndPart"></div>
 		</form>
