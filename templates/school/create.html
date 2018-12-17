@@ -2,184 +2,216 @@
 {% load static %}
 {% block content %}
 
-<style>
-#PopRegistReview {display:none;}
-</style>
-<div class="PopCover" id="PopRegistReview">
-	<div class="Popup">
-		<div class="TitleSet">
-			<div class="Close" OnClick="document.getElementById('PopRegistReview').style.display='none';">X</div>
-			<div class="Title">Review Regist</div>
-		</div>
-		<div class="Contents">
 
-
-			<div class="InfoTable">
-				<table cellpadding="0" cellspacing="0" border="0">
-					<colgroup>
-						<col width="110">
-						<col>
-					</colgroup>
-					<tr>
-						<th>Name : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" size="24" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>Grade : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" size="10" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>School : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" size="10" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>Home City : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" size="10" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>Comment : </th>
-						<td class="InnerInputTD">
-							<textarea class="TableInnerTextarea"></textarea>
-						</td>
-					</tr>
-				</table>
-			</div><!-- InfoTable -->
-
-
-			<div class="PopButtonLine">
-				<div class="Close" OnClick="document.getElementById('PopRegistReview').style.display='none';">CLOSE</div>
-				<div class="Submit" OnClick="document.getElementById('PopRegistReview').style.display='none';">SAVE</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-
-
-<style>
-#PopRegistGraduateProfile {display:none;}
-</style>
-<div class="PopCover" id="PopRegistGraduateProfile">
-	<div class="Popup">
-		<div class="TitleSet">
-			<div class="Close" OnClick="document.getElementById('PopRegistGraduateProfile').style.display='none';">X</div>
-			<div class="Title">Regist Graduate Profile</div>
-		</div>
-		<div class="Contents">
-
-
-			<div class="InfoTable">
-				<table cellpadding="0" cellspacing="0" border="0">
-					<colgroup>
-						<col width="110">
-						<col>
-						<col width="110">
-						<col>
-					</colgroup>
-					<tr>
-						<th>Name : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-						<th>Years Attended : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>Initial English : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-						<th>GPA in China : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>TOEFL : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-						<th>GPA : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>SAT / ACT : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-						<th>Activities : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-					</tr>
-					<tr>
-						<th>College : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput" style="width:calc(100% - 10px);" value="" />
-						</td>
-						<th>Major : </th>
-						<td class="InnerInputTD">
-							<input type="text" class="TableInnerInput"  style="width:calc(100% - 10px);" value="" />
-						</td>
-					</tr>
-				</table>
-			</div><!-- InfoTable -->
-
-
-			<div class="PopButtonLine">
-				<div class="Close" OnClick="document.getElementById('PopRegistGraduateProfile').style.display='none';">CLOSE</div>
-				<div class="Submit" OnClick="document.getElementById('PopRegistGraduateProfile').style.display='none';">SAVE</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-
-
-<?php include('../inc/_top.php'); ?>
 <div class="ContentsFrame">
+	
 	<div class="LeftFrame" id="LeftF">
-		<div class="SectionTitle">SECONDARY SCHOOLS</div>
+		<div class="SectionTitle">Secondary Schools</div>
 		<div class="LeftTab" id="LeftTab01">
 			<div class="TabConternts" id="InnerTab0101">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA OnMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
 				<div class="InnerTabContents">
-					<li><a href="/school/secondary/test">Saint John’s High School</a></li>
-					<li><a href="/school/secondary/test">Saint Bernadette School</a></li>
-					<li><a href="/school/secondary/test">Holy Name Catholic High School</a></li>
-					<li><a href="/school/secondary/test">Lowell Catholic High School</a></li>
-					<li><a href="/school/secondary/test">Saint Mary’s Schools of Worcester</a></li>
-					<li><a href="/school/secondary/test">Whitinsville Christian High School</a></li>
-					<li><a href="/school/secondary/test">Archbishop Williams High School</a></li>
-					<li><a href="/school/secondary/test">Arlington Catholic High School</a></li>
-					<li><a href="/school/secondary/test">Boston Trinity Academy</a></li>
-					<li><a href="/school/secondary/test">Bradford Christian Academy</a></li>
-					<li><a href="/school/secondary/test">Holy Family Academy</a></li>
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'ma' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
 				</div><!-- InnerTabContents -->
 			</div><!-- TabConternts ID:InnerTab0101 -->
 
+			<div class="TabConternts" id="InnerTab0102">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT OnCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'ct' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0102 -->
+
+			<div class="TabConternts" id="InnerTab0103">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ OnNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'nj' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0103 -->
+
+			<div class="TabConternts" id="InnerTab0104">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA OnFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'fa' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0104 -->
+
+			<div class="TabConternts" id="InnerTab0105">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC OnDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'dc' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0105 -->
+
+			<div class="TabConternts" id="InnerTab0106">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA OnCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'ca' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0106 -->
+
+			<div class="TabConternts" id="InnerTab0107">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL OnFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'fl' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0107 -->
+
+			<div class="TabConternts" id="InnerTab0108">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX OnTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'tx' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0108 -->
+
+			<div class="TabConternts" id="InnerTab0109">
+				<div class="InnerTab">
+					<div OnClick="InnerTabOpen01('InnerTab0101');" class="AreaColorMA">MA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0102');" class="AreaColorCT">CT</div>
+					<div OnClick="InnerTabOpen01('InnerTab0103');" class="AreaColorNJ">NJ</div>
+					<div OnClick="InnerTabOpen01('InnerTab0104');" class="AreaColorFA">FA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0105');" class="AreaColorDC">DC</div>
+					<div OnClick="InnerTabOpen01('InnerTab0106');" class="AreaColorCA">CA</div>
+					<div OnClick="InnerTabOpen01('InnerTab0107');" class="AreaColorFL">FL</div>
+					<div OnClick="InnerTabOpen01('InnerTab0108');" class="AreaColorTX">TX</div>
+					<div OnClick="InnerTabOpen01('InnerTab0109');" class="AreaColorETC OnETC">OTHERS</div>
+				</div><!-- InnerTab -->
+				<div class="InnerTabContents">
+					{% for secondary in secondaries %}
+						{% if secondary.state == 'others' %}
+							<li><a href="/school/secondary/update/{{secondary.school.id}}" target="_BLANK">{{secondary.school}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</div><!-- InnerTabContents -->
+			</div><!-- TabConternts ID:InnerTab0109 -->
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/school/secondary/create" class="IsolationButton">+ &nbsp; Add New School</a>
 		</div><!-- LeftTab ID:LeftTab01 -->
 
 
-					<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/school/secondary/test" class="IsolationButton">+ &nbsp; Add New School</a>
-
-
-
 	</div><!-- LeftFrame -->
+
+	<style>
+
+	#CollegeTab,
+
+	#LeftTab02,
+	#InnerTab0102, #InnerTab0103, #InnerTab0104, #InnerTab0105, #InnerTab0106, #InnerTab0107, #InnerTab0108, #InnerTab0109,
+	#InnerTab0202, #InnerTab0203, #InnerTab0204, #InnerTab0205, #InnerTab0206, #InnerTab0207, #InnerTab0208, #InnerTab0209 {display:none;}
+	</style>
+
 	<script>
 
 
@@ -235,15 +267,15 @@
 
 
 	<div class="MainFrame" id="MainF">
-		<div class="PTitle">Saint Peter-Marian High School <span>School Profile Update</span></div>
+		<!-- <div class="PTitle">Saint Peter-Marian High School <span>School Profile Update</span></div> -->
 
-		<!-- 등록일 경우
+		<!-- 등록일 경우 -->
 		<div class="PTitle">School Profile Regist</div>
-		-->
+
 
 		<div class="MTitle">School information</div>
-		<form name="" method="post" enctype="multipart/form-data">
-		<!-- input type="hidden" name="_token" value="csrf_token" -->
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
 			<div class="InfoTable">
 				<table cellpadding="0" cellspacing="0" border="0">
 					<colgroup>
@@ -254,29 +286,15 @@
 					</colgroup>
 					<tr>
 						<th>School Name : </th>
-						<td class="InnerInputTD" colspan="3"><input type="text" name="name" class="TableInnerInput" style="width:calc(100% - 10px);" value="Saint Peter-Marian High School" /></td>
+						<td class="InnerInputTD" colspan="3"><input type="text" name="name" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 					</tr>
 					<tr>
 						<th>School Main Photo  : </th>
-						<td class="InnerInputTD" colspan="3"><input type="file" name="image" class="TableInnerInput" value="" /><br />
-						<label>
-						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA8hCGZ69G52M0EThs-5dHEQr223RDgzasznLuBOxs4RG1cRyo" class="SchoolThumbnail" />
-						<input type="checkbox" /><span></span>delete</label>
-						</td>
+						<td class="InnerInputTD" colspan="3"><input type="file" name="image" class="TableInnerInput"/><br /></td>
 					</tr>
 					<tr>
 						<th>Additional Photos  : </th>
-						<td class="InnerInputTD" colspan="3"><input type="file" name="" class="TableInnerInput" value="" /><br />
-						<label>
-						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFjzv6eTle07KVFV2LHOFEM7oLaaMdAlV-_Hsi_vuSYFXsn4ZiqA" class="SchoolThumbnail" />
-						<input type="checkbox" /><span></span>delete</label>
-						<label>
-						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxtqgQZqXLlAJcmsa3GLZRf-6VeiLozvHCVUCRLX4VGzRFwlA9" class="SchoolThumbnail" />
-						<input type="checkbox" /><span></span>delete</label>
-						<label>
-						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7N_WDVOvf430oABcLznBMit__Jc1WFMqlc5vueHWb19v1N3yB" class="SchoolThumbnail" />
-						<input type="checkbox" /><span></span>delete</label>
-						</td>
+						<td class="InnerInputTD" colspan="3"><input type="file" name="photo" class="TableInnerInput" multiple/><br /></td>
 					</tr>
 					<tr>
 						<th>Partnership : </th>
@@ -289,132 +307,101 @@
 						</td>
 						<th>Provider : </th>
 						<td>
-							<label><input name="provider" type="radio" /><span></span>BGE</label>
-							<label><input name="provider" type="radio" /><span></span>Other Providers</label>
+							<label><input name="provider" type="radio" value="bge"/><span></span>BGE</label>
+							<label><input name="provider" type="radio" value="other_providers"/><span></span>Other Providers</label>
 						</td>
 					</tr>
-
-
-					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-					<script>
-					       jQuery.fn.filterByText = function(textbox, selectSingleMatch) {
-					        return this.each(function() {
-					            var select = this;
-					            var options = [];
-					            $(select).find('option').each(function() {
-					                options.push({value: $(this).val(), text: $(this).text()});
-					            });
-					            $(select).data('options', options);
-					            $(textbox).bind('change keyup', function() {
-					                var options = $(select).empty().data('options');
-					                var search = $(this).val().trim();
-					                var regex = new RegExp(search,"gi");
-					              
-					                $.each(options, function(i) {
-					                    var option = options[i];
-					                    if(option.text.match(regex) !== null) {
-					                        $(select).append(
-					                           $('<option>').text(option.text).val(option.value)
-					                        );
-					                    }
-					                });
-					                if (selectSingleMatch === true && $(select).children().length === 1) {
-					                    $(select).children().get(0).selected = true;
-					                }
-					            });            
-					        });
-					    };
-
-					    $(function() {
-					        $('#Provider_Branch').filterByText($('#Provider_Branch_textbox'), false);
-					      	$("select option").click(function(){
-					        alert(1);
-					      });
-					    });
-
-					    $(function() {
-					        $('#Admission_Coordinator').filterByText($('#Admission_Coordinator_textbox'), false);
-					      	$("select option").click(function(){
-					        alert(1);
-					      });
-					    });
-
-					    $(function() {
-					        $('#School_Coordinator').filterByText($('#School_Coordinator_textbox'), false);
-					      	$("select option").click(function(){
-					        alert(1);
-					      });
-					    });
-					</script>
 					<tr>
 						<th>Provider Branch : </th>
 						<td class="InnerInputTD" colspan="3">
-							<input id="Provider_Branch" type="text" name="provider_brnach" class="SearchInput" style="width:300px;" />
-							<select id="Provider_Branch_textbox" class="TableInnerInput">
-								<option>Select Provider Branch..</option>
-							</select>	
+							<select id="Provider_Branch_textbox" class="TableInnerInput" name="provider_branch">
+								<option value="">Select Provider Branch..</option>
+								{% for branch in provider_branches %}
+									{% if branch.id == found_school.provider_branch.id %}
+										<option value="{{branch.id}}" selected>{{branch.name}}</option>
+									{% else %}
+										<option value="{{branch.id}}">{{branch.name}}</option>
+									{% endif %}
+								{% endfor %}
+							</select>
 						</td>
 					</tr>
 					<tr>
 						<th>Admission Coordinator  : </th>
 						<td class="InnerInputTD" colspan="3">
-							<input id="Admission_Coordinator" type="text" name="admission_coordi" class="SearchInput" style="width:300px;" />
-							<select id="Admission_Coordinator_textbox" class="TableInnerInput">
-								<option>Select Admission Coordinator..</option>
-							</select>	
+							<select id="Admission_Coordinator_textbox" class="TableInnerInput" name="admission_coordi">
+								<option value="">Select Admission Coordinator..</option>
+								{% for coordi in admission_coordi %}
+									{% if coordi.user.id == found_school.admission_coordi.user.id %}
+									<option value="{{coordi.user.id}}" selected>{{coordi.user.first_name}} {{coordi.user.last_name}}</option>
+									{% else %}
+									<option value="{{coordi.user.id}}">{{coordi.user.first_name}} {{coordi.user.last_name}}</option>
+									{% endif %}
+								{% endfor %}
+							</select>
 						</td>
 					</tr>
 					<tr>
 						<th>School Coordinator  : </th>
 						<td class="InnerInputTD" colspan="3">
-							<input id="School_Coordinator" type="text" name="school_coordi" class="SearchInput" style="width:300px;" />
-							<select id="School_Coordinator_textbox" class="TableInnerInput">
-								<option>Select School Coordinator..</option>
-							</select>	
+							<select id="School_Coordinator_textbox" class="TableInnerInput" name="school_coordi">
+								<option value="">Select School Coordinator..</option>
+								{% for coordi in school_coordi %}
+									{% if coordi.user.id == found_school.school_coordi.user.id %}
+										<option value="{{coordi.user.id}}" selected>{{coordi.user.first_name}} {{coordi.user.last_name}}</option>
+									{% else %}
+										<option value="{{coordi.user.id}}">{{coordi.user.first_name}} {{coordi.user.last_name}}</option>
+									{% endif %}
+								{% endfor %}
+							</select>
 						</td>
 					</tr>
 					<tr>
 						<th>(Enroll) Term  : </th>
 						<td>
-							<label><input type="checkbox" name="term" value="fall" /><span></span>Fall</label>
-							<label><input type="checkbox" name="term" value="spring" /><span></span>Spring</label>
+							<label><input type="radio" name="term" value="fall" /><span></span>Fall</label>
+							<label><input type="radio" name="term" value="spring" /><span></span>Spring</label>
 						</td>
 						<th>(Accepting) Transfer  : </th>
 						<td>
-							<label><input type="radio" name="transfer" value="Yes" /><span></span>Yes</label>
-							<label><input type="radio" name="transfer" value="no" /><span></span>No</label>
+							<label><input type="radio" name="transfer" value="yes" /><span></span>Yes</label>
+							<label><input type="radio" name="transfer" value="" /><span></span>No</label>
 						</td>
 					</tr>
 					<tr>
 						<th>Serving Start Grades  : </th>
-						<td class="InnerInputTD"><input type="text" name="grade_start" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
+						<td class="InnerInputTD"><input type="text" pattern="\d*" name="grade_start" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 						<th>Serving End Grades  : </th>
-						<td class="InnerInputTD"><input type="text" name="grade_end" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
+						<td class="InnerInputTD"><input type="text" pattern="\d*" name="grade_end" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 					</tr>
 					<tr>
 						<th>Accepting 12th Grade  : </th>
-						<td colspan="3">
+						<td>
 							<label><input type="radio" name="accept_12_grade" value="yes" /><span></span>Yes</label>
-							<label><input type="radio" name="accept_12_grade" value="no" /><span></span>No</label>
+							<label><input type="radio" name="accept_12_grade" value="" /><span></span>No</label>
+						</td>
+						<th>Toefl Requirement  : </th>
+						<td>
+							<label><input type="text" name="toefl_requirement" placeholder="Please Enter Only Numbers.." pattern="\d*" /><span></span></label>
 						</td>
 					</tr>
 					<tr>
 						<th>Application Fee : </th>
-						<td class="InnerInputTD"><input type="text" name="application_fee" class="TableInnerInput" style="width:calc(100% - 10px);" placeholder="Please Enter Only Numbers.." /></td>
+						<td class="InnerInputTD"><input type="text" name="application_fee" class="TableInnerInput" style="width:calc(100% - 10px);" placeholder="Please Enter Only Numbers.." pattern="\d*"/></td>
 						<th>Program Fee  : </th>
-						<td class="InnerInputTD"><input type="text" name="program_fee" class="TableInnerInput" style="width:calc(100% - 10px);" placeholder="Please Enter Only Numbers.." /></td>
+						<td class="InnerInputTD"><input type="text" name="program_fee" class="TableInnerInput" style="width:calc(100% - 10px);" placeholder="Please Enter Only Numbers.." pattern="\d*"/></td>
 					</tr>
 					<tr>
 						<th>Admission Requirements : </th>
-						<td class="InnerInputTD" colspan="3"><input type="text" name="admissin_requirements" class="TableInnerInput" style="width:calc(100% - 10px);" value="" /></td>
+						<td class="InnerInputTD" colspan="3"><input type="text" name="admission_requirements" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 					</tr>
 					<tr>
 						<th>Admission DocumentsList : </th>
-						<td class="InnerInputTD" colspan="3"><input type="text" name="admission_documents" class="TableInnerInput" style="width:calc(100% - 10px);" value="" /></td>
+						<td class="InnerInputTD" colspan="3"><input type="text" name="admission_documents" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 					</tr>
 					<tr>
 						<th>Selling Points(Both English & Chinese) : </th>
-						<td class="InnerInputTD" colspan="3"><input type="text" name="selling_points" class="TableInnerInput" style="width:calc(100% - 10px);" value="" /></td>
+						<td class="InnerInputTD" colspan="3"><input type="text" name="selling_point" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 					</tr>
 					<tr>
 						<th>Country : </th>
@@ -426,27 +413,27 @@
 								<option value="uk">UK</option>
 								<option value="au">AU</option>
 								<option value="nz">NZ</option>
-							</select>	
+							</select>
 						</td>
 						<th>Location : </th>
 						<td class="InnerInputTD">
-							<label><input type="radio" name="secondary_location" value="ma" required /><span></span>MA</label>
-							<label><input type="radio" name="secondary_location" value="ct" required /><span></span>CT</label>
-							<label><input type="radio" name="secondary_location" value="nj" required /><span></span>NJ</label>
-							<label><input type="radio" name="secondary_location" value="pa" required /><span></span>PA</label>
-							<label><input type="radio" name="secondary_location" value="dc" required /><span></span>DC</label>
-							<label><input type="radio" name="secondary_location" value="fl" required /><span></span>FL</label>
-							<label><input type="radio" name="secondary_location" value="tx" required /><span></span>TX</label>
-							<label><input type="radio" name="secondary_location" value="others" required /><span></span>Others</label>
+							<label><input type="radio" name="state" value="ma" required /><span></span>MA</label>
+							<label><input type="radio" name="state" value="ct" /><span></span>CT</label>
+							<label><input type="radio" name="state" value="nj" /><span></span>NJ</label>
+							<label><input type="radio" name="state" value="pa" /><span></span>PA</label>
+							<label><input type="radio" name="state" value="dc" /><span></span>DC</label>
+							<label><input type="radio" name="state" value="fl" /><span></span>FL</label>
+							<label><input type="radio" name="state" value="tx" /><span></span>TX</label>
+							<label><input type="radio" name="state" value="others" /><span></span>Others</label>
 						</td>
 					</tr>
 					<tr>
 						<th>Address : </th>
-						<td class="InnerInputTD" colspan="3"><input type="text" name="address" class="TableInnerInput" style="width:calc(100% - 10px);" value="Complete  Address" /></td>
+						<td class="InnerInputTD" colspan="3"><input type="text" name="address" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 					</tr>
 					<tr>
 						<th>Area Description : </th>
-						<td class="InnerInputTD" colspan="3"><input type="text" name="area_description" class="TableInnerInput" style="width:calc(100% - 10px);" value="ex. suburban residential area" /></td>
+						<td class="InnerInputTD" colspan="3"><input type="text" name="area_description" class="TableInnerInput" style="width:calc(100% - 10px);" /></td>
 					</tr>
 					<tr>
 						<th>Phone # : </th>
@@ -480,9 +467,9 @@
 					</tr>
 					<tr>
 						<th>Students # : </th>
-						<td class="InnerInputTD"><input type="text" name="number_students" class="TableInnerInput" style="width:calc(100% - 10px);" value="" /></td>
+						<td class="InnerInputTD"><input type="text" name="number_students" class="TableInnerInput" style="width:calc(100% - 10px);" value="" pattern="\d*"/></td>
 						<th>International Students : </th>
-						<td class="InnerInputTD"><input type="text" name="international_students" class="TableInnerInput" style="width:calc(100% - 10px);" value="" /></td>
+						<td class="InnerInputTD"><input type="text" name="international_students" class="TableInnerInput" style="width:calc(100% - 10px);" value="" pattern="\d*"/></td>
 					</tr>
 					<tr>
 						<th>ESL : </th>
@@ -491,7 +478,7 @@
 							<label><input type="radio" name="esl" value="no" /><span></span>No</label>
 						</td>
 						<th>Student: Teach Ratio : </th>
-						<td class="InnerInputTD"><input type="text" name="student_teacher_ratio" class="TableInnerInput" style="width:calc(100% - 10px);" value="" /></td>
+						<td class="InnerInputTD"><input type="text" name="student_teach_ratio" class="TableInnerInput" style="width:calc(100% - 10px);" value="" /></td>
 					</tr>
 					<tr>
 						<th>Class Size : </th>
@@ -541,104 +528,11 @@
 
 
 			<div class="SubmitButtonLine">
-				<button class="Close" OnClick="self.close();">CLOSE</button>
 				<button class="Submit" type="submit">SAVE</button>
 			</div>
 			<div class="EndPart"></div>
 		</form>
 
-
-		<div class="MTitle">Current Student Review</div>
-		<div class="ListSearch Aright">
-			<a href="Javascript:void(0);" class="IsolationButton" OnClick="document.getElementById('PopRegistReview').style.display='block';">+ &nbsp; Regist Review</a>
-		</div>
-		<div class="cdiv"></div>
-		<!-- 학교리뷰목록 -->
-		<div class="ListTable">
-			<table cellpadding="0" cellspacing="0" border="0">
-				<colgroup>
-					<col>
-				</colgroup>
-				<tr>
-					<th>No</th>
-					<th>Name</th>
-					<th>Grade</th>
-					<th>School</th>
-					<th>Home city</th>
-				</tr>
-				<tr>
-					<td>124</td>
-					<td><a href="">Yixun “Patrick” Bu</a></td>
-					<td>10th</td>
-					<td>St John’s High School</td>
-					<td>Jinan, Shandong, China</td>
-				</tr>
-				<tr>
-					<td>124</td>
-					<td><a href="">Yixun “Patrick” Bu</a></td>
-					<td>10th</td>
-					<td>St John’s High School</td>
-					<td>Jinan, Shandong, China</td>
-				</tr>
-			</table>
-		</div><!-- ListTable -->
-		<!-- 학교리뷰목록 끝 -->
-		<div class="EndPart"></div>
-
-		<div class="MTitle">Graduate Profile</div>
-		<div class="ListSearch Aright">
-			<a href="Javascript:void(0);" class="IsolationButton" OnClick="document.getElementById('PopRegistGraduateProfile').style.display='block';">+ &nbsp; Regist Graduate Profile</a>
-		</div>
-		<div class="cdiv"></div>
-		<!-- 학교리뷰목록 -->
-		<div class="ListTable">
-			<table cellpadding="0" cellspacing="0" border="0">
-				<colgroup>
-					<col>
-				</colgroup>
-				<tr>
-					<th>No</th>
-					<th>Name</th>
-					<th>Years Attended</th>
-					<th>Initial English</th>
-					<th>GPA in China</th>
-					<th>TOEFL</th>
-					<th>GPA</th>
-					<th>SAT / ACT</th>
-					<th>Activities</th>
-					<th>College</th>
-					<th>Major</th>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-			</table>
-		</div><!-- ListTable -->
-		<!-- 학교리뷰목록 끝 -->
-		<div class="EndPart"></div>
 
 	</div><!-- MainFrame -->
 </div><!--  ContentsFrame-->
